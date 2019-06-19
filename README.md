@@ -2,7 +2,7 @@
 
 A simple open source Android password manager. 
 
-##Features
+## Features
 Adding an existing account
 Generating a new password
 Sort by account type:
@@ -12,4 +12,4 @@ Sort by account type:
 
 
 
-####Written by Kepler Siguineau 
+#### Written by Kepler Siguineau 
