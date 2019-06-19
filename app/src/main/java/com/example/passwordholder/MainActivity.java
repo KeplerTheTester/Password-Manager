@@ -130,12 +130,20 @@ public class MainActivity extends AppCompatActivity {
     private void testDatabase()
     {
         AppDatabase db = Room.databaseBuilder(getApplicationContext(),
-                AppDatabase.class, "database-name").build();
+                AppDatabase.class, "database-name").allowMainThreadQueries().build();
         List<Category> test = db.categoryDao().getAll();
-        for(Category category: test)
+        Toast.makeText(this, "The size"+test.size(), Toast.LENGTH_LONG).show();
+        //This is for testing how database works, not good code practice
+        Category category = new Category();
+        category.setFirstName("one first");
+        category.setLastName("one last");
+        category.setUid(18);
+        db.categoryDao().addCategory(category);
+        for(Category ca: test)
         {
-            System.out.println(category);
-            //yep
+            System.out.println("category "+ ca.getFirstName()+"  "+ca.getLastName()
+                    +"  "+ca.getUid());
+            //yep 
         }
 
 

@@ -9,6 +9,10 @@ import java.util.List;
 
 @Dao
 public interface CategoryDao {
+
+    @Insert
+    void addCategory(Category category);
+
     @Query("SELECT * FROM category")
     List<Category> getAll();
 
