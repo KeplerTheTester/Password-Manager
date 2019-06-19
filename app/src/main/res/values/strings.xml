@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Password Holder</string>
+    <string-array name="account_categories">
+        <item>Google</item>
+        <item>Yahoo</item>
+        <item>Slack</item>
+        <item>Discord</item>
+        <item>Apple</item>
+        <item>LinkedIn</item>
+        <item>Add Category</item>
+    </string-array>
+</resources>
