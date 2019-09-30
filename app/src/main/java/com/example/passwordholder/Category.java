@@ -9,11 +9,24 @@ public class Category {
     @PrimaryKey//(autoGenerate = true)
     public int uid;
 
-    @ColumnInfo(name = "first_name")
-    public String firstName;
 
-    @ColumnInfo(name = "last_name")
-    public String lastName;
+    @ColumnInfo(name = "item_category")
+    public String itemCategory;
+
+    @ColumnInfo(name = "item_detail")
+    public String itemDetail;
+
+    public Category(int uid,String itemCategory, String itemDetail)
+    {
+        this.itemCategory = itemCategory;
+        this.itemDetail = itemDetail;
+        this.uid = uid;
+    }
+
+    public Category()
+    {
+
+    }
 
     public int getUid() {
         return uid;
@@ -23,19 +36,24 @@ public class Category {
         this.uid = uid;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getItemCategory() {
+        return itemCategory;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void setItemCategory(String itemCategory) {
+        this.itemCategory = itemCategory;
     }
 
-    public String getLastName() {
-        return lastName;
+    public String getItemDetail() {
+        return itemDetail;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setItemDetail(String itemDetail) {
+        this.itemDetail = itemDetail;
+    }
+
+    @Override
+    public String toString() {
+        return "UID: "+ uid+"\n item category: "+itemCategory+"\n item detail: "+itemDetail;
     }
 }
